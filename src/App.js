@@ -37,6 +37,14 @@ class App extends Component {
     };
 
     retrieveData = (city, fromUser = true) => {
+        if (!city) {
+            this.setState({
+                today: null,
+            });
+
+            return;
+        }
+
         if (fromUser)
             this.setState({
                 hasUserTyped: true
@@ -70,6 +78,5 @@ class App extends Component {
         )
     }
 }
-
 
 export default App;

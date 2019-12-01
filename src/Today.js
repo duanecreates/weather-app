@@ -4,10 +4,6 @@ import sunriseIcon from './icons/sunrise-icon.svg';
 import sunsetIcon from './icons/sunset-icon.svg';
 
 class Today extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const today = this.props.today ? this.props.today : null;
         const city_name = today ? today.city_name : null;

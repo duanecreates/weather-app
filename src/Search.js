@@ -21,9 +21,10 @@ class Search extends Component {
     render() {
         return (
             <div className="Search">
+                {/*TODO dont submit form on enter*/}
                 <form onSubmit={this.submit}>
                     <input placeholder="Search City" value={this.state.city} onKeyUp={this.submit}
-                           onChange={this.handleInput}/>
+                           onChange={this.handleInput} autoFocus={true}/>
                 </form>
             </div>
         )
