@@ -54,7 +54,8 @@ class App extends Component {
             isLoading: true,
         });
 
-        axios.get(`https://api.weatherbit.io/v2.0/current?city=${city}&units=m&key=b0f5636290994055be0da20d196ec507`).then(res => {
+        // replace enter_key_here with an API key from https://www.weatherbit.io/account/dashboard
+        axios.get(`https://api.weatherbit.io/v2.0/current?city=${city}&units=m&key=enter_key_here`).then(res => {
             this.setState({
                 today: res.data.data[0],
                 isLoading: false,
