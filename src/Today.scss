@@ -1,0 +1,38 @@
+@import "variables";
+
+.Today {
+  border-radius: 18px;
+  background-color: $light-purple;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+
+  h1 {
+    color: $white;
+    font-size: 32px;
+  }
+
+  .result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .icon {
+      width: auto;
+      height: 70px;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    span {
+      color: $white;
+      font-size: 53px;
+    }
+  }
+}

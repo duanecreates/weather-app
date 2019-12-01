@@ -1,0 +1,18 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Muli', sans-serif;
+  background-color: $dark-purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}
