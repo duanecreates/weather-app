@@ -1,17 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Search.scss';
+import _ from 'lodash';
 
-function Search() {
-    // TODO submit API query
+class Search extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {city: ''};
+    }
 
-    return (
-        <div className="Search">
-            {/*TODO handle on form submit*/}
-            <form>
-                <input placeholder="Search City"/>
-            </form>
-        </div>
-    )
+    submit = _.debounce(() => {
+        this.props.updatedCity(this.state.city);
+    }, 500);
+
+    handleInput = (e) => {
+        this.setState({
+            city: e.target.value
+        });
+    };
+
+    render() {
+        return (
+            <div className="Search">
+                <form onSubmit={this.submit}>
+                    <input placeholder="Search City" value={this.state.city} onKeyUp={this.submit}
+                           onChange={this.handleInput}/>
+                </form>
+            </div>
+        )
+    }
 }
 
 export default Search;

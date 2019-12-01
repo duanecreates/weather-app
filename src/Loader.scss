@@ -1,0 +1,71 @@
+@import "variables";
+
+.spinner {
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  margin: 80px auto auto;
+
+  .ball {
+    width: 20px;
+    height: 20px;
+    background-color: $light-purple;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-animation: motion 1.7s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    animation: motion 1.7s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+  }
+
+  p {
+    color: $white;
+    margin-top: 15px;
+    letter-spacing: 3px;
+    font-size: 18px;
+  }
+}
+
+@-webkit-keyframes motion {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    -webkit-transform: translateX(-50px) scale(0.3);
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    -webkit-transform: translateX(50px) scale(0.3);
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes motion {
+  0% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  25% {
+    -webkit-transform: translateX(-50px) scale(0.3);
+    transform: translateX(-50px) scale(0.3);
+  }
+  50% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+  75% {
+    -webkit-transform: translateX(50px) scale(0.3);
+    transform: translateX(50px) scale(0.3);
+  }
+  100% {
+    -webkit-transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
+  }
+}
